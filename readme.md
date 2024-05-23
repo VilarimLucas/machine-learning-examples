@@ -72,6 +72,24 @@ deactivate
 
 ```
 
+Para a Execução da aula 4 focada em redes neurais, é necessário executar um comando para aumentar o limite de caracteres (Windows Path Part)
+
+```bash
+
+New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
+
+```
+Em seguida é necessário a Instalação do Tensor Flow:
+
+```bash
+pip install tensorflow
+```
+é necessário também:
+
+```bash
+pip install matplotlib
+```
+
 
 Após executar `deactivate`, o prompt voltará ao normal, indicando que o ambiente global está ativo.
 
